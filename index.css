@@ -1,70 +1,110 @@
-body {
+* {
   margin: 0;
   padding: 0;
+  box-sizing: border-box;
   font-family: Arial, Helvetica, sans-serif;
-  font-size: 1.125rem;
-  background-color: rgb(209, 209, 209);
+}
+
+body {
+  height: 100vh;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: rgb(230, 230, 230);
 }
 
 main {
-  margin: 0 auto;
-  width: 60%;
-  margin-top: 4em;
-  border: none;
-  box-shadow: 2px 2px 8px 8px rgb(194, 194, 194);
-  border-radius: 3em;
-}
-
-.image-container {
-  width: 100%;
-  min-height: 170px;
-  background-image: linear-gradient(to bottom, red, darkred);
-  margin: 0;
-  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 70%;
+  background-color: white;
   border-radius: 2em;
-  z-index: 1;
+  padding: 2em;
+  box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1);
   position: relative;
 }
 
-.image-container img {
-  width: 37%;
-  border: .3em solid white;
-  border-radius: 3em;
+main::before {
+  content: '';
   position: absolute;
-  top: 6em;
-  right: 0;
-  left: 5em;
+  height: 40%;
+  width: 100%;
+  top: 0;
+  left: 0;
+  border-radius: 2em;
+  background-image: linear-gradient(to bottom, red, darkred);
+}
+
+.image-container {
+  position: relative;
+  height: 150px;
+  width: 150px;
+  border-radius: 50%;
+  padding: 3px;
+  margin-bottom: 1em;
+}
+
+.image-container img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid white;
 }
 
 section {
-  width: 100%;
-  background-color: white;
-  margin: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 2em;
   text-align: center;
-  margin-top: -1.7em;
-  padding-top: 5em;
-  padding-bottom: 1em;
-  border-bottom-left-radius: 3em;
-  border-bottom-right-radius: 3em;
 }
 
-section h3,
-section p{
-  margin: 0;
-}
-
-h3 {
+section h3 {
   font-size: 1.4rem;
+  font-weight: 700;
 }
 
-.job {
-  font-size: .8rem;
+section .job {
+  font-size: 1rem;
   font-weight: 600;
-  margin-top: .7em;
-  padding-bottom: .3em;
+  margin-top: .3em;
+  border-bottom: .2em solid rgb(214, 28, 28);
+  padding: 0 3em .4em 3em;
 }
 
-.info {
-  font-size: .8rem;
-  padding: .2em;
+section .info {
+  margin-top: .7em;
+  font-size: .9rem;
+}
+
+section .current-time {
+  margin-top: .4em;
+}
+
+nav {
+  display: flex;
+  align-items: center;
+  margin-top: 1em;
+}
+
+nav a {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: rgb(190, 4, 4);
+  font-size: 1.2rem;
+  margin: 0 .3em;
+  height: 34px;
+  width: 34px;
+  border-radius: 50%;
+  text-decoration: none;
+}
+
+@media (min-width: 600px) {
+  main {
+    max-width: 370px;
+    width: 100%;
+  }
 }

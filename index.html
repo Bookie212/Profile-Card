@@ -6,6 +6,8 @@
   <title>My Profile Card</title>
 
   <link rel="stylesheet" href="index.css">
+
+  <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
 </head>
 <body>
   <main>
@@ -17,16 +19,28 @@
       <h3 data-testid="fullName">Bukola Hambolu</h3>
       <p class="job" data-testid="jobTitle">Frontend Developer</p>
 
-      <p class="info" data-testid="shortBio">A Frontend developer with proficient in html, css and javascript</p>
+      <p class="info" data-testid="shortBio">Hi, I'm Bukola, a tech enthusiast with passion for Frontend
+        development. My tech stack includes HTML, CSS & JS.<br>"Let's connect&#x21;"
+      </p>
       <p class="info" data-testid="currentLocation">Abuja, Nigeria</p>
+      <p class="current-time js-current-time" data-testid="currentTimeUTC"></p>
       <nav>
-        <a href="http://linkedin.com/in/bukola-hambolu-71a581209" data-testid="socialLinks"></a>
-        <a href="https://github.com/bookie212/" data-testid="socialLinks"></a>
-        <a href="https://x.com/bookey082/" data-testid="socialLinks"></a>
+        <a href="http://linkedin.com/in/bukola-hambolu-71a581209" data-testid="socialLinks">
+          <i class='bx bxl-linkedin'></i>
+        </a>
+        <a href="https://github.com/bookie212/" data-testid="socialLinks">
+          <i class='bx bxl-github'></i>
+        </a>
+        <a href="https://x.com/bookey082/" data-testid="socialLinks">
+          <i class='bx bxl-twitter'></i>
+        </a>
       </nav>
-      <p data-testid="currentTimeUTC">time</p>
+     
     </section>
     
   </main>
 </body>
+
+<script src="https://unpkg.com/dayjs@1.11.10/dayjs.min.js"></script>
+<script type="module" src="index.js"></script>
 </html>
